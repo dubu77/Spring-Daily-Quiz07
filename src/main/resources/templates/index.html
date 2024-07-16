@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="<http://www.thymeleaf.org>">
+<head>
+    <title>Hello, Thymeleaf!</title>
+</head>
+<body>
+<h1>Hello, Thymeleaf!</h1>
+
+<h2>User Information</h2>
+<p>Name: <span th:text="${user.name}"></span></p>
+<p>Email: <span th:text="${user.email}"></span></p>
+
+<div th:if="${user.isAdmin}">
+    <a href="#">관리자 메뉴</a>
+</div>
+<div th:unless="${user.isAdmin}">
+    <a href="#">일반 사용자 메뉴</a>
+</div>
+
+<a href="/products">View Products</a>
+<a href="/register">Register New User</a>
+</body>
+</html>
