@@ -1,15 +1,12 @@
 package com.example.springdailyquiz;
 
-
 import lombok.*;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Getter
-public class Book {
-    private Long id;
+public class BookDTO {
     private String title;
     private String author;
     private String isbn;
